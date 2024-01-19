@@ -144,7 +144,7 @@ func (s *State) Render() {
 	row := 14
 	switch s.CurrentView {
 	case VIEW_WATERFALL:
-		s.drawText(row, 3, width, DefaultStyle, "STACK", nil)
+		s.drawText(row, 3, width, DefaultStyle, "LOGICAL RESOURCE ID", nil)
 		s.drawText(row, 57, width, DefaultStyle, "INTERVAL", nil)
 		s.renderWaterfall(row + 1)
 	case VIEW_HELP:
