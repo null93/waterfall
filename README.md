@@ -1,7 +1,8 @@
 # Waterfall
 > Cloudformation CLI tool to analyze and visualize stack events as a waterfall diagram
 
-![GitHub Release](https://img.shields.io/github/v/release/null93/waterfall?sort=semver&style=for-the-badge)
+![GitHub Release](https://img.shields.io/github/v/release/null93/waterfall?sort=semver&style=for-the-badge&color=%23007EC6)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/null93/waterfall/.github%2Fworkflows%2Fmain.yml?style=for-the-badge&color=%23007EC6)
 
 <p align="center" >
   <img width="75%" alt="screenshot" src="https://github.com/null93/waterfall/assets/5500199/4e01d4ef-0abf-4701-8350-ef4c4e23cbfe">
