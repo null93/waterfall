@@ -1,6 +1,12 @@
 # Waterfall
 > Cloudformation CLI tool to analyze and visualize stack events as a waterfall diagram
 
+![GitHub Release](https://img.shields.io/github/v/release/null93/waterfall?sort=semver&style=for-the-badge)
+
+<p align="center" >
+  <img width="75%" alt="screenshot" src="https://github.com/null93/waterfall/assets/5500199/4e01d4ef-0abf-4701-8350-ef4c4e23cbfe">
+</p>
+
 ## About
 
 In the realm of cloud infrastructure management, the default CloudFormation dashboard often lacks depth, offering only a basic list of events. This can make it challenging to gain a comprehensive understanding of the lifecycle of resources. This program seeks to overcome this limitation by gathering and organizing events from your primary stack and its nested counterparts. The outcome is a thorough interval-based visualization presented in an intuitive waterfall diagram. The status of each interval (in-progress, complete, or failed) is represented using different Unicode characters, while the type of event is indicated by color (green for create, red for delete, etc).
