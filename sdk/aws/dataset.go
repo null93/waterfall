@@ -153,32 +153,30 @@ func (ds *DataSet) refreshIntervals() {
 		}
 		if _, ok := seen[event.EventId]; !ok {
 			isDuplicateCompleteEvent := strings.HasSuffix(string(event.ResourceStatus), "_COMPLETE")
-			if !isDuplicateCompleteEvent {
-				if temp.Start == nil {
-					temp.Start = &event
-					for j := i - 1; j >= 0; j-- {
-						target := events[j]
-						if _, ok := seen[target.EventId]; !ok && target.LogicalResourceId == event.LogicalResourceId && target.StackId == event.StackId {
-							hasValidEnd := strings.HasSuffix(string(target.ResourceStatus), "_FAILED") || strings.HasSuffix(string(target.ResourceStatus), "_COMPLETE")
-							if event.ResourceStatus == target.ResourceStatus || !hasValidEnd {
-								seen[target.EventId] = true
-								temp.Intermediate = append(temp.Intermediate, &target)
-							} else {
-								seen[target.EventId] = true
-								temp.End = &target
-								stackIntervals.AppendInterval(lastOperationStack, lastOperationEventId, temp)
-								temp = Interval{}
-								break
-							}
+			if !isDuplicateCompleteEvent && temp.Start == nil {
+				temp.Start = &event
+				for j := i - 1; j >= 0; j-- {
+					target := events[j]
+					if _, ok := seen[target.EventId]; !ok && target.LogicalResourceId == event.LogicalResourceId && target.StackId == event.StackId {
+						hasValidEnd := strings.HasSuffix(string(target.ResourceStatus), "_FAILED") || strings.HasSuffix(string(target.ResourceStatus), "_COMPLETE")
+						if event.ResourceStatus == target.ResourceStatus || !hasValidEnd {
+							seen[target.EventId] = true
+							temp.Intermediate = append(temp.Intermediate, &target)
+						} else {
+							seen[target.EventId] = true
+							temp.End = &target
+							stackIntervals.AppendInterval(lastOperationStack, lastOperationEventId, temp)
+							temp = Interval{}
+							break
 						}
 					}
-					if temp.Start != nil && temp.End == nil {
-						temp.End = &Event{Timestamp: time.Now(), ResourceStatus: temp.Start.ResourceStatus}
-						stackIntervals.AppendInterval(lastOperationStack, lastOperationEventId, temp)
-						temp = Interval{}
-					}
 				}
-			} else {
+				if temp.Start != nil && temp.End == nil {
+					temp.End = &Event{Timestamp: time.Now(), ResourceStatus: temp.Start.ResourceStatus}
+					stackIntervals.AppendInterval(lastOperationStack, lastOperationEventId, temp)
+					temp = Interval{}
+				}
+			} else if temp.Start != nil && temp.Start.LogicalResourceId == event.LogicalResourceId && temp.Start.StackId == event.StackId {
 				seen[event.EventId] = true
 				temp.Intermediate = append(temp.Intermediate, &event)
 			}
