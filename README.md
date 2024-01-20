@@ -31,17 +31,17 @@ In the realm of cloud infrastructure management, the default CloudFormation dash
   ### amd64
   
   ```shell
-  curl -sL -o ./waterfall_1.0.0_amd64.deb https://github.com/null93/waterfall/releases/download/1.0.0/waterfall_1.0.0_amd64.deb
-  sudo dpkg -i ./waterfall_1.0.0_amd64.deb
-  rm ./waterfall_1.0.0_amd64.deb
+  curl -sL -o ./waterfall_1.0.1_amd64.deb https://github.com/null93/waterfall/releases/download/1.0.1/waterfall_1.0.1_amd64.deb
+  sudo dpkg -i ./waterfall_1.0.1_amd64.deb
+  rm ./waterfall_1.0.1_amd64.deb
   ```
 
   ### arm64
 
   ```shell
-  curl -sL -o ./waterfall_1.0.0_arm64.deb https://github.com/null93/waterfall/releases/download/1.0.0/waterfall_1.0.0_arm64.deb
-  sudo dpkg -i ./waterfall_1.0.0_arm64.deb
-  rm ./waterfall_1.0.0_arm64.deb
+  curl -sL -o ./waterfall_1.0.1_arm64.deb https://github.com/null93/waterfall/releases/download/1.0.1/waterfall_1.0.1_arm64.deb
+  sudo dpkg -i ./waterfall_1.0.1_arm64.deb
+  rm ./waterfall_1.0.1_arm64.deb
   ```
 </details>
 
@@ -51,13 +51,13 @@ In the realm of cloud infrastructure management, the default CloudFormation dash
   ### aarch64
 
   ```shell
-  rpm -i https://github.com/null93/waterfall/releases/download/1.0.0/waterfall-1.0.0-1.aarch64.rpm
+  rpm -i https://github.com/null93/waterfall/releases/download/1.0.1/waterfall-1.0.1-1.aarch64.rpm
   ```
 
   ### x86_64
 
   ```shell
-  rpm -i https://github.com/null93/waterfall/releases/download/1.0.0/waterfall-1.0.0-1.x86_64.rpm
+  rpm -i https://github.com/null93/waterfall/releases/download/1.0.1/waterfall-1.0.1-1.x86_64.rpm
   ```
 </details>
 
@@ -67,17 +67,17 @@ In the realm of cloud infrastructure management, the default CloudFormation dash
   ### aarch64
 
   ```shell
-  curl -sL -o ./waterfall_1.0.0_aarch64.apk https://github.com/null93/waterfall/releases/download/1.0.0/waterfall_1.0.0_aarch64.apk
-  apk add --allow-untrusted ./waterfall_1.0.0_aarch64.apk
-  rm ./waterfall_1.0.0_aarch64.apk
+  curl -sL -o ./waterfall_1.0.1_aarch64.apk https://github.com/null93/waterfall/releases/download/1.0.1/waterfall_1.0.1_aarch64.apk
+  apk add --allow-untrusted ./waterfall_1.0.1_aarch64.apk
+  rm ./waterfall_1.0.1_aarch64.apk
   ```
 
   ### x86_64
 
   ```shell
-  curl -sL -o ./waterfall_1.0.0_x86_64.apk https://github.com/null93/waterfall/releases/download/1.0.0/waterfall_1.0.0_x86_64.apk
-  apk add --allow-untrusted ./waterfall_1.0.0_x86_64.apk
-  rm ./waterfall_1.0.0_x86_64.apk
+  curl -sL -o ./waterfall_1.0.1_x86_64.apk https://github.com/null93/waterfall/releases/download/1.0.1/waterfall_1.0.1_x86_64.apk
+  apk add --allow-untrusted ./waterfall_1.0.1_x86_64.apk
+  rm ./waterfall_1.0.1_x86_64.apk
   ```
 </details>
 
@@ -87,17 +87,17 @@ In the realm of cloud infrastructure management, the default CloudFormation dash
   ### aarch64
 
   ```shell
-  curl -sL -o ./waterfall-1.0.0-1-aarch64.pkg.tar.zst https://github.com/null93/waterfall/releases/download/1.0.0/waterfall-1.0.0-1-aarch64.pkg.tar.zst
-  sudo pacman -U ./waterfall-1.0.0-1-aarch64.pkg.tar.zst
-  rm ./waterfall-1.0.0-1-aarch64.pkg.tar.zst
+  curl -sL -o ./waterfall-1.0.1-1-aarch64.pkg.tar.zst https://github.com/null93/waterfall/releases/download/1.0.1/waterfall-1.0.1-1-aarch64.pkg.tar.zst
+  sudo pacman -U ./waterfall-1.0.1-1-aarch64.pkg.tar.zst
+  rm ./waterfall-1.0.1-1-aarch64.pkg.tar.zst
   ```
 
   ### x86_64
 
   ```shell
-  curl -sL -o ./waterfall-1.0.0-1-x86_64.pkg.tar.zst https://github.com/null93/waterfall/releases/download/1.0.0/waterfall-1.0.0-1-x86_64.pkg.tar.zst
-  sudo pacman -U ./waterfall-1.0.0-1-x86_64.pkg.tar.zst
-  rm ./waterfall-1.0.0-1-x86_64.pkg.tar.zst
+  curl -sL -o ./waterfall-1.0.1-1-x86_64.pkg.tar.zst https://github.com/null93/waterfall/releases/download/1.0.1/waterfall-1.0.1-1-x86_64.pkg.tar.zst
+  sudo pacman -U ./waterfall-1.0.1-1-x86_64.pkg.tar.zst
+  rm ./waterfall-1.0.1-1-x86_64.pkg.tar.zst
   ```
 </details>
 
